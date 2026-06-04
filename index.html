@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mis 15 Años</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+background:#fff0f5;
+}
+
+.hero{
+padding:50px;
+background:linear-gradient(#ffb6c1,#fff);
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.foto{
+width:250px;
+border-radius:50%;
+}
+
+section{
+padding:40px;
+}
+
+.boton{
+display:inline-block;
+padding:15px 25px;
+background:#e91e63;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+#contador{
+font-size:30px;
+font-weight:bold;
+}
+
+.galeria img{
+width:250px;
+margin:10px;
+border-radius:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1>Sofía</h1>
+
+<p>Te invito a celebrar mis 15 años</p>
+
+<img src="foto-principal.jpg" class="foto">
+
+</div>
+
+<section>
+
+<h2>Faltan</h2>
+
+<div id="contador"></div>
+
+</section>
+
+<section>
+
+<h2>Galería</h2>
+
+<div class="galeria">
+
+<img src="foto1.jpg">
+<img src="foto2.jpg">
+<img src="foto3.jpg">
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Ubicación</h2>
+
+<a class="boton"
+href="https://maps.google.com"
+target="_blank">
+
+Ver ubicación
+
+</a>
+
+</section>
+
+<section>
+
+<h2>Confirmar asistencia</h2>
+
+<a class="boton"
+href="https://wa.me/59800000000">
+
+Confirmar por WhatsApp
+
+</a>
+
+</section>
+
+<script>
+
+const fechaEvento =
+new Date("2027-03-20 21:00:00");
+
+function actualizar(){
+
+const ahora=new Date();
+
+const diferencia=
+fechaEvento-ahora;
+
+const dias=
+Math.floor(diferencia/
+(1000*60*60*24));
+
+document.getElementById("contador")
+.innerHTML=
+dias+" días";
+
+}
+
+actualizar();
+
+setInterval(actualizar,1000);
+
+</script>
+
+</body>
+</html>
