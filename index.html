@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -26,6 +28,12 @@ background:linear-gradient(
 );
 }
 
+.hero h1{
+font-size:70px;
+margin-bottom:10px;
+color:#c48a2a;
+}
+
 .foto{
 width:250px;
 border-radius:50%;
@@ -40,9 +48,7 @@ border-radius:20px;
 box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
-.boton{.boton:hover{
-transform:scale(1.05);
-}
+.boton{
 display:inline-block;
 padding:15px 30px;
 background:#c48a2a;
@@ -51,6 +57,10 @@ text-decoration:none;
 border-radius:30px;
 font-weight:bold;
 transition:0.3s;
+}
+
+.boton:hover{
+transform:scale(1.05);
 }
 
 #contador{
@@ -67,9 +77,11 @@ border-radius:20px;
 box-shadow:0 4px 15px rgba(0,0,0,0.2);
 transition:0.3s;
 }
+
 .galeria img:hover{
 transform:scale(1.05);
 }
+
 </style>
 
 </head>
@@ -80,9 +92,11 @@ transform:scale(1.05);
 
 <h1>Sofía</h1>
 
+<p>
 Tengo el honor de invitarte a celebrar
 una noche mágica e inolvidable
 con motivo de mis 15 años.
+</p>
 
 <img src="15 AS.jpg" class="foto">
 
@@ -92,19 +106,36 @@ con motivo de mis 15 años.
 
 <h2>✨ Mis 15 Años ✨</h2>
 
-<p>
-📅 20 de marzo de 2027
-</p>
+<p>📅 20 de marzo de 2027</p>
+
+<p>🕘 21:00 horas</p>
+
+<p>📍 Parque Rodó - Montevideo</p>
+
+</section>
+
+<section>
+
+<h2>Una noche mágica</h2>
 
 <p>
-🕘 21:00 horas
-</p>
-
-<p>
-📍 Parque Rodó - Montevideo
+Quiero compartir contigo uno de los momentos
+más importantes de mi vida.
+Tu presencia hará que esta celebración
+sea aún más especial.
 </p>
 
 </section>
+
+<section>
+
+<h2>Faltan</h2>
+
+<div id="contador"></div>
+
+</section>
+
+<section>
 
 <h2>Galería</h2>
 
@@ -137,23 +168,12 @@ Ver ubicación
 <h2>Confirmar asistencia</h2>
 
 <a class="boton"
-href="https://wa.me/59811111111?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%2015%20de%20Sofía"
+href="https://wa.me/59811111111?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%2015%20de%20Sofía">
 
 Confirmar por WhatsApp
 
 </a>
-<section>
 
-<h2>Una noche mágica</h2>
-
-<p>
-Quiero compartir contigo uno de los momentos
-más importantes de mi vida.
-Tu presencia hará que esta celebración
-sea aún más especial.
-</p>
-
-</section>
 </section>
 
 <script>
@@ -197,7 +217,9 @@ segundos + " segundos";
 actualizar();
 
 setInterval(actualizar,1000);
+
 </script>
 
 </body>
+
 </html>
