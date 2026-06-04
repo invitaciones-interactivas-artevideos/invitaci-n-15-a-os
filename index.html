@@ -52,7 +52,8 @@ color:#c48a2a;
 }
 
 .foto{
-width:250px;
+width:80%;
+max-width:300px;
 border-radius:50%;
 }
 
@@ -88,17 +89,34 @@ color:#c48a2a;
 }
 
 .galeria img{
-width:250px;
-margin:10px;
-border-radius:20px;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
-transition:0.3s;
-}
+width:80%;
+max-width:300px;
 
 .galeria img:hover{
 transform:scale(1.05);
 }
+@media (max-width: 768px){
 
+.hero h1{
+font-size:60px;
+}
+
+#contador{
+font-size:28px;
+}
+
+section{
+margin:15px;
+padding:25px;
+}
+
+.boton{
+display:block;
+width:80%;
+margin:auto;
+}
+
+}
 </style>
 
 </head>
