@@ -1,260 +1,298 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación Elegante</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<title>Mis 15 Años</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-<style>
-<section>
+    <style>
+        :root {
+            --color-fondo: #f0f0f0;
+            --color-titulo: #5a2a6d;
+            --color-texto: #333;
+            --color-boton: #5a2a6d;
+            --color-boton-texto: #fff;
+            --color-box: rgba(255, 255, 255, 0.9);
+            --color-borde-box: rgba(0, 0, 0, 0.1);
+            --sombra: rgba(0, 0, 0, 0.2);
+            --title-font: 'Great Vibes', cursive;
+            --body-font: 'Poppins', sans-serif;
+            --titulo-tamano: 2rem; /* Tamaño de títulos */
+            --texto-tamano: 1rem; /* Tamaño de texto */
+            --espaciado-boxes: 30px; /* Espaciado entre boxes */
+        }
 
-<h2>🎵 Mi canción</h2>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<audio controls>
+        body {
+            font-family: var(--body-font);
+            background: var(--color-fondo);
+            color: var(--color-texto);
+            overflow-x: hidden;
+        }
 
-<source src="musica.mp3" type="audio/mpeg">
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.8));
+            box-shadow: 0 4px 8px var(--sombra);
+        }
 
-Tu navegador no soporta audio.
+        .hero-content {
+            max-width: 800px;
+        }
 
-</audio>
+        .titulo {
+            font-family: var(--title-font);
+            font-size: clamp(3rem, 5vw, var(--titulo-tamano));
+            color: var(--color-titulo);
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        }
 
-</section>
-body{
-margin:0;
-font-family:Georgia, serif;
-text-align:center;
-background:#fff8fb;
-color:#444;
-}
+        .frase-hero {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
 
-.hero{
-padding:80px 20px;
-background:linear-gradient(
-180deg,
-#ffd6e7,
-#fff8fb
-);
-}
+        .box {
+            width: min(880px, 100%);
+            margin: var(--espaciado-boxes) auto;
+            padding: 20px;
+            border-radius: 10px;
+            background: var(--color-box);
+            border: 1px solid var(--color-borde-box);
+            box-shadow: 0 4px 8px var(--sombra);
+            text-align: center;
+        }
 
-.hero h1{
-font-family:'Great Vibes', cursive;
-font-size:90px;
-margin-bottom:10px;
-color:#c48a2a;
-}
-font-size:70px;
-margin-bottom:10px;
-color:#c48a2a;
-}
+        .box h2 {
+            font-size: var(--titulo-tamano);
+            color: var(--color-titulo);
+            margin-bottom: 10px;
+        }
 
-.foto{
-width:80%;
-max-width:300px;
-border-radius:50%;
-}
+        .box p {
+            font-size: var(--texto-tamano);
+            line-height: 1.5;
+            color: var(--color-texto);
+        }
 
-section{
-padding:40px;
-margin:30px auto;
-max-width:900px;
-background:white;
-border-radius:20px;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-}
+        .btn {
+            background: var(--color-boton);
+            color: var(--color-boton-texto);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px 0;
+        }
 
-.boton{
-display:inline-block;
-padding:15px 30px;
-background:#c48a2a;
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-transition:0.3s;
-}
+        .btn:hover {
+            background: darken(var(--color-boton), 10%);
+        }
 
-.boton:hover{
-transform:scale(1.05);
-}
+        @media (max-width: 600px) {
+            .titulo {
+                font-size: 2.5rem;
+            }
 
-#contador{
-font-size:35px;
-font-weight:bold;
-line-height:1.8;
-color:#c48a2a;
-}
-
-.galeria img{
-width:80%;
-max-width:300px;
-
-.galeria img:hover{
-transform:scale(1.05);
-}
-@media (max-width: 768px){
-
-.hero h1{
-font-size:60px;
-}
-
-#contador{
-font-size:28px;
-}
-
-section{
-margin:15px;
-padding:25px;
-}
-
-.boton{
-display:block;
-width:80%;
-margin:auto;
-}
-
-}
-</style>
-
+            .frase-hero {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="hero">
+    <section class="hero">
+        <div class="hero-content">
+            <div class="titulo">Mis 15 Años</div>
+            <div class="frase-hero">Te invito a compartir una noche mágica llena de alegría y amor.</div>
+            <a href="#info" class="btn">Desliza para ver la invitación</a>
+        </div>
+    </section>
 
-<h1>Sofía</h1>
+    <main id="info">
+        <div class="box">
+            <h2>Faltan...</h2>
+            <div class="countdown">
+                <div class="time"><span id="d">0</span><small>Días</small></div>
+                <div class="time"><span id="h">0</span><small>Hs</small></div>
+                <div class="time"><span id="m">0</span><small>Min</small></div>
+                <div class="time"><span id="s">0</span><small>Seg</small></div>
+            </div>
+        </div>
 
-<p>
-Tengo el honor de invitarte a celebrar
-una noche mágica e inolvidable
-con motivo de mis 15 años.
-</p>
+        <div class="box">
+            <h2>Fecha y lugar</h2>
+            <p id="dateText"></p>
+            <p id="timeText"></p>
+            <p id="venueText"></p>
+            <p id="addressText"></p>
+        </div>
 
-<img src="15 AS.jpg" class="foto">
+        <div class="box">
+            <h2>Mira cómo llegar</h2>
+            <a id="mapLink" class="btn" href="#" target="_blank" rel="noopener">Ver mapa</a>
+        </div>
 
-</div>
+        <div class="box">
+            <h2>Dress code</h2>
+            <p id="dressCodeText"></p>
+        </div>
 
-<section>
+        <div class="box">
+            <h2>Mis recuerdos</h2>
+            <div class="carousel" aria-label="Carrete de fotos">
+                <button class="carousel-btn prev" type="button" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="carousel-viewport">
+                    <div id="carouselTrack" class="carousel-track"></div>
+                </div>
+                <button class="carousel-btn next" type="button" aria-label="Foto siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+                <div id="carouselDots" class="carousel-dots" aria-hidden="true"></div>
+            </div>
+        </div>
 
-<h2>✨ Mis 15 Años ✨</h2>
+        <div class="box">
+            <h2>Confirmación de asistencia</h2>
+            <p>Tu presencia es muy importante para mí. ¡Me encantaría que me acompañes!</p>
+            <a id="confirmLink" class="btn" href="#" target="_blank" rel="noopener">Confirmar asistencia</a>
+        </div>
 
-<p>📅 20 de marzo de 2027</p>
+        <div class="box">
+            <h2>¡Playlist!</h2>
+            <p>Ayudame sugiriendo las canciones que pensás que no pueden faltar en la fiesta.</p>
+            <a id="playlistLink" class="btn" href="#" target="_blank" rel="noopener">Playlist</a>
+        </div>
 
-<p>🕘 21:00 horas</p>
+        <div class="box">
+            <h2>Regalo</h2>
+            <p>El mejor regalo es que vengas, pero si deseas regalarme algo, podés colaborar con mis sueños y anhelos.</p>
+            <button class="btn" type="button" onclick="toggleGiftPanel()">Ver Colectivo</button>
+            <div id="giftPanel" class="gift-panel" hidden>
+                <div class="gift-row"><strong>Nombre del titular</strong><span id="giftTitular"></span></div>
+                <div class="gift-row"><strong>Banco</strong><span id="giftBanco"></span></div>
+                <div class="gift-row"><strong>Número de cuenta</strong><span id="giftCuenta"></span></div>
+                <div class="gift-row"><strong>CI</strong><span id="giftCi"></span></div>
+                <div class="copy-actions">
+                    <button class="btn copy-btn" type="button" onclick="copiarDato(CONFIG.regalo.cuenta)">Copiar cuenta</button>
+                </div>
+            </div>
+        </div>
 
-<p>📍 Parque Rodó - Montevideo</p>
+        <div class="box">
+            <div class="frase-final">
+                Te espero para compartir este momento tan especial... ¡Será una noche para recordar siempre!
+            </div>
+        </div>
+    </main>
 
-</section>
+    <script>
+        const CONFIG = {
+            paleta: "dorado",
+            fuentes: "glam",
+            tamanoTitulos: "2rem", // Tamaño de títulos
+            tamanoTextos: "1rem", // Tamaño de textos
+            espaciadoBoxes: "30px", // Espaciado entre boxes
 
-<section>
+            colores: {
+                fondo: "",
+                nombre: "#e3b486",
+                mis15: "",
+                textosSueltos: "",
+                titulos: "",
+                iconos: "",
+                textoBoxes: "",
+                textoBoxesSuave: "",
+                boxes: "",
+                bordeBoxes: "",
+                botonFondo1: "",
+                botonFondo2: "",
+                botonTexto: "",
+                botonBorde: "",
+                contadorNumeros: "",
+                contadorTexto: "",
+                miniBoxes: "",
+                bordeMiniBoxes: "",
+                panelRegalo: "",
+                bordePanelRegalo: "",
+                overlayArriba: "",
+                overlayAbajo: "",
+                overlayLados: "",
+                overlayCentro: "",
+                sombra: ""
+            },
 
-<h2>Una noche mágica</h2>
+            mostrarRegalo: true,
+            mostrarPlaylist: true,
+            nombre: "Julieta",
+            fechaEvento: "2026-10-17T20:00:00",
+            fechaTexto: "El sábado 17 de octubre",
+            horaTexto: "A partir de las 20:00 horas",
+            salon: "En Salón Aurora Palace",
+            direccion: "Avenida Las Flores 2020",
+            mapa: "https://maps.app.goo.gl/cKfbAR5rutndHhUD8",
+            dressCode: "Semiformal",
+            whatsapp: "59895090806",
+            mensajeWhatsApp: "Hola, quiero confirmar mi asistencia al cumpleaños de Julieta",
+            playlistLink: "https://docs.google.com/forms/d/e/1FAIpQLScqPkvgqVB4HsSz1baU1HlrFILnP-eSKfCqbBZtX4Gk-JCsWA/viewform?usp=sharing&ouid=116004140157480559476",
+            mensajePlaylistWhatsApp: "Hola, quiero sugerir una canción para la fiesta: ",
+            regalo: {
+                titular: "Nombre Apellido",
+                banco: "Banco XXXX",
+                cuenta: "1234567890",
+                ci: "1.234.567-8"
+            },
+            fotos: [
+                "foto1.jpg",
+                "foto2.jpg",
+                "foto3.jpg",
+                "foto4.jpg",
+                "foto5.jpg",
+                "foto6.jpg",
+                "foto7.jpg",
+                "foto8.jpg",
+                "foto9.jpg",
+                "foto10.jpg"
+            ]
+        };
 
-<p>
-Quiero compartir contigo uno de los momentos
-más importantes de mi vida.
-Tu presencia hará que esta celebración
-sea aún más especial.
-</p>
+        // Funciones para cargar datos, colores, etc., aquí...
 
-</section>
+        function cargarDatos() {
+            document.getElementById("dateText").innerText = CONFIG.fechaTexto;
+            document.getElementById("timeText").innerText = CONFIG.horaTexto;
+            document.getElementById("venueText").innerText = CONFIG.salon;
+            document.getElementById("addressText").innerText = CONFIG.direccion;
+            document.getElementById("mapLink").href = CONFIG.mapa;
+            document.getElementById("dressCodeText").innerText = CONFIG.dressCode;
 
-<section>
+            const texto = encodeURIComponent(CONFIG.mensajeWhatsApp);
+            document.getElementById("confirmLink").href = `https://wa.me/${CONFIG.whatsapp}?text=${texto}`;
+        }
 
-<h2>Faltan</h2>
+        // Más funciones según sea necesario...
 
-<div id="contador"></div>
-
-</section>
-
-<section>
-
-<h2>Galería</h2>
-
-<div class="galeria">
-
-<img src="15 AS.jpg">
-<img src="15 AÑOS MARCO BLANCO.png">
-<img src="15 AÑOS R.jpg">
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Ubicación</h2>
-
-<a class="boton"
-href="https://maps.google.com/?q=Parque+Rodo+Montevideo"
-target="_blank">
-
-Ver ubicación
-
-</a>
-
-</section>
-
-<section>
-
-<h2>Confirmar asistencia</h2>
-
-<a class="boton"
-href="https://wa.me/59895090806?text=Hola, confirmo asistencia al cumple de Sofía">
-
-Confirmar por WhatsApp
-
-</a>
-
-</section>
-
-<script>
-
-const fechaEvento = new Date("2027-03-20T21:00:00");
-
-function actualizar() {
-
-const ahora = new Date();
-
-const diferencia = fechaEvento - ahora;
-
-const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-
-const horas = Math.floor(
-(diferencia % (1000 * 60 * 60 * 24))
-/
-(1000 * 60 * 60)
-);
-
-const minutos = Math.floor(
-(diferencia % (1000 * 60 * 60))
-/
-(1000 * 60)
-);
-
-const segundos = Math.floor(
-(diferencia % (1000 * 60))
-/
-1000
-);
-
-document.getElementById("contador").innerHTML =
-dias + " días<br>" +
-horas + " horas<br>" +
-minutos + " minutos<br>" +
-segundos + " segundos";
-
-}
-
-actualizar();
-
-setInterval(actualizar,1000);
-
-</script>
+        // Llamadas a funciones al cargar la página
+        cargarDatos();
+    </script>
 
 </body>
-
 </html>
